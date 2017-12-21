@@ -1,0 +1,18 @@
+{
+  "расчетный счет": "CHECKOUT_ACC",
+  "сбербанк бизнес онлайн": "SBBOL",
+  "1с": "ACC_SYSTEM_1S",
+  "платежное поручение": "INVOICE",
+  "корреспондентский счет": "TRANSFER_ACC",
+  "сим карта": "SIM_CARD",
+  "сбербанк": "SBRF",
+  "смс": "SMS",
+  "индивидульный предприниматель": "IND_BUSSINESS",
+  "пин": "PIN_CODE",
+  "пук": "PUK_CODE",
+  "юридическое лицо": "BUSSINESS_OFFICIAL",
+  "физическое лицо": "CITIZEN_OFFICIAL",
+  "доллар": "DOLLAR",
+  "налоговая": "TAX_SERVICE",
+  "ТПСБ": "SUPPORT"
+}
