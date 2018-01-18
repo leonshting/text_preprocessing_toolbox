@@ -1,0 +1,76 @@
+{
+  "tokens": {
+    "ACCEPT_STAGE": {
+      "synonyms": [
+        "статус\\s+принимать\\s+абс",
+        "статус\\s+принят\\s+абс",
+        "принят\\s+абс",
+        "принимать\\s+абс"
+      ],
+      "parents": [
+        "ACCEPT",
+        "STAGE"
+      ]
+    },
+    "NOT_ACCEPT_STAGE": {
+      "synonyms": [
+        "отказывать\\s+абс"
+      ],
+      "parents": [
+        "ACCEPT",
+        "STAGE"
+      ]
+    },
+    "TRANSFER_TO_ACC": {
+      "synonyms": [
+        "перевод[уыа]? на счет[ыау]"
+      ],
+      "parents": [
+        "TRANSFER",
+        "ACCOUNT"
+      ]
+    },
+    "TRANSFER_FROM_ACC": {
+      "synonyms": [
+        "перевод[уыа]? со счет[ыау]"
+      ],
+      "parents": [
+        "TRANSFER",
+        "ACCOUNT"
+      ]
+    },
+    "TRANSFER_COMMON": {
+      "synonyms": [
+        "перевод\\s+счет",
+        "перевод\\s+карта"
+      ],
+      "parents": [
+        "TRANSFER",
+        "ACCOUNT"
+      ]
+    },
+    "DELETE_LIMIT": {
+      "synonyms": [
+        "(ограничение|лимит)\\s+снятие",
+        "снятие\\s+(ограничение|лимит)",
+        "снять\\s+(ограничение|лимит)",
+        "(ограничение|лимит)\\s+снять"
+      ],
+      "parents": [
+        "DELETE",
+        "LIMIT"
+      ]
+    },
+    "SETUP_LIMIT": {
+      "synonyms": [
+        "устанавливать\\s+(ограничение|лимит)",
+        "(ограничение|лимит)\\s+устанавливать"
+      ],
+      "parents": [
+        "LIMIT",
+        "SETUP"
+      ]
+    }
+  },
+  "type": "COMPOSED_ENTITY"
+}

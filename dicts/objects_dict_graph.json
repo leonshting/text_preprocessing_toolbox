@@ -1,0 +1,600 @@
+{
+  "tokens": {
+    "CHECKOUT_ACC": {
+      "synonyms": [
+        "рс?[\\/\\\\\\.]?с(ч[её]т(ами|ом|ов|ам|ах|у|а|ы)?)?",
+        "рс?[\\/\\\\\\.]сч?",
+        "расчетный счет"
+      ],
+      "parents": [
+        "ACCOUNT"
+      ]
+    },
+    "SBBOL": {
+      "synonyms": [
+        "сбербанкбизнесонлайн",
+        "сбб?ол",
+        "сб-бизнес-онлайн",
+        "сбербанк\\s+бизнес\\s+онлайн",
+        "интернет\\s+банк"
+      ],
+      "parents": [
+        "SBRF"
+      ]
+    },
+    "ACC_SYSTEM_1S": {
+      "synonyms": [
+        "[cс]-?1",
+        "1[-\\s]?[сc]",
+        "1с"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "INVOICE": {
+      "synonyms": [
+        "п(лат|л)?\\.?[\\/\\\\\\s]?поручени[иеюя]?",
+        "пл?\\.?[\\/\\\\\\s]?по?р?\\.?",
+        "платежка",
+        "платежный\\s+поручение",
+        "платежок",
+        "банковский ордер",
+        "платежный документ",
+        "ведомость"
+      ],
+      "parents": [
+        "DOCUMENT"
+      ]
+    },
+    "TRANSFER_ACC": {
+      "synonyms": [
+        "корр?\\.*\\s*сч[её]?т",
+        "корреспондентский счет"
+      ],
+      "parents": [
+        "ACCOUNT"
+      ]
+    },
+    "SIM_CARD": {
+      "synonyms": [
+        "(sim|сим|cim)([-\\s]*карта)?",
+        "сим карта"
+      ],
+      "parents": [
+        "PHONE"
+      ]
+    },
+    "SBRF": {
+      "synonyms": [
+        "сб(ер)?",
+        "сбербанк"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "SMS": {
+      "synonyms": [
+        "sms",
+        "cmc",
+        "смс",
+        "смска"
+      ],
+      "parents": [
+        "PHONE"
+      ]
+    },
+    "IND_BUSSINESS": {
+      "synonyms": [
+        "и\\.?п\\.??",
+        "индивидуальный предприниматель"
+      ],
+      "parents": [
+        "BUSINESS_OFFICIAL"
+      ]
+    },
+    "PIN_CODE": {
+      "synonyms": [
+        "pin",
+        "пин([-\\s]*код)?",
+        "пин"
+      ],
+      "parents": [
+        "AUTH_FEAT"
+      ]
+    },
+    "PUK_CODE": {
+      "synonyms": [
+        "puk",
+        "пук([-\\s]*код)?",
+        "пук"
+      ],
+      "parents": [
+        "AUTH_FEAT"
+      ]
+    },
+    "BUSINESS_OFFICIAL": {
+      "synonyms": [
+        "юр\\.?[\\/\\\\\\s]?лицо?",
+        "юридическое лицо"
+      ],
+      "parents": [
+        "PERSON"
+      ]
+    },
+    "CITIZEN_OFFICIAL": {
+      "synonyms": [
+        "физ\\.?[\\/\\\\\\s]?лицо?",
+        "физическое лицо",
+        "физический лицо"
+      ],
+      "parents": [
+        "PERSON"
+      ]
+    },
+    "DOLLAR": {
+      "synonyms": [
+        "((долл(ары|ар|\\.)?)|\\$)"
+      ],
+      "parents": [
+        "MONEY"
+      ]
+    },
+    "EURO": {
+      "synonyms": [
+        "((евро)|€)"
+      ],
+      "parents": [
+        "MONEY"
+      ]
+    },
+    "TAX_SERVICE": {
+      "synonyms": [
+        "фнс",
+        "налоговый",
+        "налоговая"
+      ],
+      "parents": [
+        "TAX"
+      ]
+    },
+    "TAX": {
+      "synonyms": [
+        "налог",
+        "ндс"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "SUPPORT": {
+      "synonyms": [
+        "8-800-555-5-777",
+        "технический поддержка",
+        "колл-центр"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "PHONE_NUMBER": {
+      "synonyms": [
+        "((8|\\+7)-?)?\\(?\\d{3}\\)?-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}",
+        "номер\\s+мобильный\\s+телефон",
+        "номер\\s+телефон"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "NEW_DESIGN": {
+      "synonyms": [
+        "новый\\s+дизайн",
+        "новый\\s+интерфейс",
+        "новый\\s+версия",
+        "новый\\s+платформа",
+        "новый\\s+программа"
+      ],
+      "parents": [
+        "DESIGN"
+      ]
+    },
+    "OLD_DESIGN": {
+      "synonyms": [
+        "старый\\s+дизайн",
+        "старый\\s+интерфейс",
+        "старый\\s+версия",
+        "cтарый\\s+платформа",
+        "старый\\s+формат",
+        "старый\\s+программа",
+        "старый\\s+сбербанк-онлайн"
+      ],
+      "parents": [
+        "DESIGN"
+      ]
+    },
+    "DESIGN": {
+      "synonyms": [
+        "дизайн",
+        "интерфейс"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "APPLIED_INVOICE": {
+      "synonyms": [
+        "счет[ -]+фактура"
+      ],
+      "parents": [
+        "INVOICE"
+      ]
+    },
+    "CARDHOLDER": {
+      "synonyms": [
+        "держатель\\s+карта"
+      ],
+      "parents": [
+        "PERSON"
+      ]
+    },
+    "ACCOUNT_LOG": {
+      "synonyms": [
+        "выписка"
+      ],
+      "parents": [
+        "ACCOUNT"
+      ]
+    },
+    "SALARY_PROJECT": {
+      "synonyms": [
+        "зарплатн[ыо]й проект"
+      ],
+      "parents": [
+        "SALARY"
+      ]
+    },
+    "CORPORATE_CARD": {
+      "synonyms": [
+        "карта\\s+зарплатный",
+        "карта\\s+корпоративный",
+        "корпоративный\\s+карта",
+        "зарплатный\\s+карта"
+      ],
+      "parents": [
+        "CARD"
+      ]
+    },
+    "REGISTRY": {
+      "synonyms": [
+        "картотека",
+        "справочник контрагент",
+        "реестр"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "ACCOUNT_DETAILS": {
+      "synonyms": [
+        "бик",
+        "кпп",
+        "реквизит"
+      ],
+      "parents": [
+        "ACCOUNT"
+      ]
+    },
+    "EMAIL": {
+      "synonyms": [
+        "электронный\\s+почта",
+        "e-mail"
+      ],
+      "parents": [
+        "AUTH_FEAT"
+      ]
+    },
+    "PERSONAL_TAX_ID": {
+      "synonyms": [
+        "инн"
+      ],
+      "parents": [
+        "TAX"
+      ]
+    },
+    "AUTHORIZATION": {
+      "synonyms": [
+        "подписание\\s+документ",
+        "подпись\\s+документ",
+        "подписание",
+        "подпись"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "AUTH_FEAT": {
+      "synonyms": [
+        "ключ",
+        "токен",
+        "фл[еэ]шка",
+        "кодовый\\s+слово",
+        "слово\\s+кодовый",
+        "пароль",
+        "код",
+        "смс-код",
+        "sms-код",
+        "эп"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "LIMIT_ON": {
+      "synonyms": [
+        "ограничение\\s+по",
+        "ограничение\\s+на"
+      ],
+      "parents": [
+        "LIMIT"
+      ]
+    },
+    "LIMIT": {
+      "synonyms": [
+        "лимит",
+        "ограничение"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "PAYMENT": {
+      "synonyms": [
+        "переводить\\s+деньги",
+        "платеж",
+        "выплата",
+        "оплата"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "GOVERN_WORK": {
+      "synonyms": [
+        "оборонзаказ",
+        "гособоронзаказ"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "OLD": {
+      "synonyms": [
+        "старый",
+        "прежний"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "NEW": {
+      "synonyms": [
+        "новый"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "RECIPIENT": {
+      "synonyms": [
+        "получатель",
+        "контрагент"
+      ],
+      "parents": [
+        "PERSON"
+      ]
+    },
+    "CERTIFICATE": {
+      "synonyms": [
+        "сертификат электронный подпись",
+        "сертификат\\s+электронный",
+        "электронный\\s+сертификат",
+        "сертификат"
+      ],
+      "parents": [
+        "AUTH_FEAT"
+      ]
+    },
+    "SALARY": {
+      "synonyms": [
+        "заработный\\s+плата",
+        "зарплата",
+        "зарплатный",
+        "з[\\/\\\\\\.]п"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "UNCOMFORTABLE_OR_BAD": {
+      "synonyms": [
+        "не\\s*удобный",
+        "не\\s*удобно",
+        "плохой",
+        "плохо",
+        "не\\s*практичный"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "GOOD_UNTIL": {
+      "synonyms": [
+        "срок действия",
+        "период действия"
+      ],
+      "parents": [
+        "TIME_PERIOD"
+      ]
+    },
+    "ACCOUNT": {
+      "synonyms": [
+        "счет"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "MONEY": {
+      "synonyms": [
+        "денежный\\s+средств[оа]?",
+        "деньги",
+        "средства",
+        "средство",
+        "средств",
+        "наличные"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "BANK_SERVICE": {
+      "synonyms": [
+        "услуга",
+        "услуги"
+      ],
+      "parents": [
+        "SBRF"
+      ]
+    },
+    "EQUIRING": {
+      "synonyms": [
+        "эквайринг"
+      ],
+      "parents": [
+        "BANK_SERVICE"
+      ]
+    },
+    "TIME_PERIOD": {
+      "synonyms": [
+        "сейчас",
+        "сегодня",
+        "до\\s+сей\\s+пора",
+        "месяц",
+        "период",
+        "день",
+        "неделя",
+        "вчера"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "BUSINESS_CARD": {
+      "synonyms": [
+        "бизнес[-\\s*]карта",
+        "карта[-\\s*]бизнес"
+      ],
+      "parents": [
+        "CARD"
+      ]
+    },
+    "SALARY_CARD": {
+      "synonyms": [
+        "зарплатной\\s+карта"
+      ],
+      "parents": [
+        "CARD"
+      ]
+    },
+    "CARD": {
+      "synonyms": [
+        "карта",
+        "карточка"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "STAGE": {
+      "synonyms": [
+        "в\\s+абс",
+        "абс",
+        "ожидание\\s+к\\s+исполнение"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "ERROR": {
+      "synonyms": [
+        "ошибка"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "INCOME": {
+      "synonyms": [
+        "поступление"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "OUTCOME": {
+      "synonyms": [
+        "расходный",
+        "расход"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "APP": {
+      "synonyms": [
+        "мобильный приложение"
+      ],
+      "parents": [
+        "PHONE"
+      ]
+    },
+    "RESIDUAL": {
+      "synonyms": [
+        "баланс",
+        "остаток"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "STATUS": {
+      "synonyms": [
+        "статус"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "PHONE": {
+      "synonyms": [
+        "телефон",
+        "мобильный\\s+телефон"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "DOCUMENT":
+    {
+      "synonyms": [
+        "документ"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    }
+  },
+  "type": "OBJECT"
+}

@@ -1,0 +1,411 @@
+{
+  "tokens": {
+    "PRINT": {
+      "synonyms": [
+        "распечатывать",
+        "печать",
+        "отметка"
+      ],
+      "parents": [
+        "OUTPUT"
+      ]
+    },
+    "AUTHORIZE": {
+      "synonyms": [
+        "подписывать"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "DOWNLOAD": {
+      "synonyms": [
+        "скачать"
+      ],
+      "parents": [
+        "LOAD"
+      ]
+    },
+    "LOAD": {
+      "synonyms": [
+        "загрузить"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "OUTPUT": {
+      "synonyms": [
+        "выдать"
+      ],
+      "parents":[
+        "ACTION"
+      ]
+    },
+    "CREATE": {
+      "synonyms": [
+        "создать",
+        "составлять",
+        "создавать",
+        "сформировывать",
+        "сформировываться",
+        "сформировать",
+        "формирование",
+        "формировать",
+        "создание"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+
+    "DELETE": {
+      "synonyms": [
+        "удалять",
+        "удалить"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "OPEN": {
+      "synonyms": [
+        "открывать",
+        "открыть",
+        "открытие",
+        "открываться"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "CLOSE": {
+      "synonyms": [
+        "закрыть",
+        "закрывать"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "ISSUE": {
+      "synonyms": [
+        "выпуск",
+        "выпускать",
+        "выпускаться"
+      ],
+      "parents": [
+        "OPEN"
+      ]
+    },
+    "DO": {
+      "synonyms": [
+        "сделать",
+        "производить",
+        "проводить",
+        "проводиться",
+        "уходить",
+        "делать"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "ACCEPT": {
+      "synonyms": [
+        "принимать",
+        "приниматься",
+        "принять"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "REVERT": {
+      "synonyms": [
+        "вернуть(ся)?",
+        "возврат",
+        "снимать",
+        "отзывать"
+      ],
+      "parents": [
+        "RETURN"
+      ]
+    },
+    "TRANSFER": {
+      "synonyms": [
+        "переводить",
+        "перевод",
+        "перевести",
+        "скидывать",
+        "отправлять"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "CHANGE_TO": {
+      "synonyms": [
+        "переходить\\s+на",
+        "переходить"
+      ],
+      "parents": [
+        "CHANGE"
+      ]
+    },
+    "CANNOT": {
+      "synonyms": [
+        "не\\s+мочь"
+      ],
+      "parents": [
+        "CAN"
+      ]
+    },
+    "CAN": {
+      "synonyms": [
+        "можно",
+        "мочь"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "SETUP": {
+      "synonyms": [
+        "устанавливать",
+        "установка",
+        "устанавливаться"
+      ],
+      "parents": [
+        "ADD"
+      ]
+    },
+    "IMPORT": {
+      "synonyms": [
+        "импортировать",
+        "импорт"
+      ],
+      "parents": [
+        "ADD"
+      ]
+    },
+    "EXPORT": {
+      "synonyms": [
+        "выгружать",
+        "экспорт",
+        "экспортировать"
+      ],
+      "parents": [
+        "OUTPUT"
+      ]
+    },
+    "CHANGE": {
+      "synonyms": [
+        "сменить",
+        "смена",
+        "(из|по)меняться",
+        "редактировать",
+        "поменять",
+        "смениться"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "COPY": {
+      "synonyms": [
+        "с?копировать",
+        "копия"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "SAVE": {
+      "synonyms": [
+        "сохранять",
+        "сохранить",
+        "сохраняться"
+      ],
+      "parents": [
+        "OUTPUT"
+      ]
+    },
+    "WITHDRAW": {
+      "synonyms": [
+        "списывать",
+        "списание",
+        "снятие"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "GIVE_DETAIL": {
+      "synonyms": [
+        "пояснение",
+        "пояснить"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "POINT": {
+      "synonyms": [
+        "указывать",
+        "указать"
+      ],
+      "parents": [
+        "GIVE_DETAIL"
+      ]
+    },
+    "TURN_ON": {
+      "synonyms": [
+        "(в|под)ключать",
+        "(в|под)ключение"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "TURN_OFF": {
+      "synonyms": [
+        "отключать",
+        "отключение"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "FULFILL": {
+      "synonyms": [
+        "пополнение",
+        "пополнить",
+        "вносить"
+      ],
+      "parents": [
+        "ADD"
+      ]
+    },
+    "CONFIRM": {
+      "synonyms": [
+        "подтверждать",
+        "подтверждение"
+      ],
+      "parents": [
+        "AUTHORIZE"
+      ]
+    },
+    "WORK": {
+      "synonyms": [
+        "работать",
+        "работа"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "RETURN": {
+      "synonyms": [
+        "возвращаться",
+        "возврат",
+        "возобновление",
+        "оставаться"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "ORDER": {
+      "synonyms": [
+        "заказывать",
+        "заказ"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "ADD": {
+      "synonyms": [
+        "добавлять",
+        "добавить",
+        "добавление"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "BLOCK": {
+      "synonyms": [
+        "(за)?блокировать"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "APPLY": {
+      "synonyms": [
+        "заявка",
+        "заявление",
+        "заявить",
+        "заявиться"
+      ],
+      "parents": [
+        "WRITE"
+      ]
+    },
+    "WRITE": {
+      "synonyms": [
+        "писать"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "BE": {
+      "synonyms": [
+        "есть"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "OBTAIN": {
+      "synonyms": [
+        "получать",
+        "получение",
+        "получить"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "COMPLAIN": {
+      "synonyms": [
+        "жалоба"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "ATTACH": {
+      "synonyms": [
+        "прикреплять",
+        "привязывать"
+      ],
+      "parents": [
+        "ADD"
+      ]
+    },
+    "PAY": {
+      "synonyms": [
+        "оплачивать",
+        "платить"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    }
+  },
+  "type": "ACTION"
+}

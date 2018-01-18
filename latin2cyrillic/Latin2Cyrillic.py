@@ -32,8 +32,13 @@ class Latin2Cyrillic:
         cnt = self._word_cyr_lat_occurrence(word=word, cyrillic_first=True)
         length_significant = cnt.sum()
 
-        if cnt[0]/length_significant > threshold:
+        if cnt[0]/(length_significant+0.01) > threshold:
             return self._subs_latin_with_cyrillic(word=word)
+        else:
+            return word
+
+    def filter_string(self, s:str):
+        return " ".join([self.subs(i) for i in s.split()])
 
     def _subs_latin_with_cyrillic(self, word: str):
         """perform substitution of latin characters"""
