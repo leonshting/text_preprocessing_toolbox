@@ -1,8 +1,7 @@
-import json
 from itertools import product
 
-from prod.dict_parsers.GraphDictParser import GraphDictParser
-from prod.dict_parsers.BaseDictParser import BaseDictParser
+from preprocessing.prod.dict_parsers.GraphDictParser import GraphDictParser
+from preprocessing.prod.dict_parsers.BaseDictParser import BaseDictParser
 
 dict_parsers = {
     'base': BaseDictParser,

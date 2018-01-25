@@ -1,12 +1,12 @@
 import json
 from functools import reduce
 
-from filters.StaticFilter import StaticFilter
-from filters.SynonymReplacer import SynonymReplacer
-from helpers.small_static_rpl import *
-from filters.predefined.UnicodeFilter import UnicodeFilter
-from filters.predefined.MyStemWrapper import MyStemWrapper
-from latin2cyrillic.Latin2Cyrillic import Latin2Cyrillic
+from preprocessing.filters.StaticFilter import StaticFilter
+from preprocessing.filters.SynonymReplacer import SynonymReplacer
+from preprocessing.helpers.small_static_rpl import *
+from preprocessing.filters.predefined.UnicodeFilter import UnicodeFilter
+from preprocessing.filters.predefined.MyStemWrapper import MyStemWrapper
+from preprocessing.latin2cyrillic.Latin2Cyrillic import Latin2Cyrillic
 
 
 class ConfigParser:

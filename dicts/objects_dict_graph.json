@@ -16,7 +16,9 @@
         "сбб?ол",
         "сб-бизнес-онлайн",
         "сбербанк\\s+бизнес\\s+онлайн",
-        "интернет\\s+банк"
+        "интернет\\s+банк",
+        "мобильный\\s+банк",
+        "онлайн\\s+банк"
       ],
       "parents": [
         "SBRF"
@@ -58,8 +60,9 @@
     },
     "SIM_CARD": {
       "synonyms": [
-        "(sim|сим|cim)([-\\s]*карта)?",
-        "сим карта"
+        "(sim|сим|cim)([-\\s]*карт[уыа])?",
+        "сим карта",
+        "сей карта"
       ],
       "parents": [
         "PHONE"
@@ -138,7 +141,7 @@
         "((долл(ары|ар|\\.)?)|\\$)"
       ],
       "parents": [
-        "MONEY"
+        "CURRENCY"
       ]
     },
     "EURO": {
@@ -146,7 +149,7 @@
         "((евро)|€)"
       ],
       "parents": [
-        "MONEY"
+        "CURRENCY"
       ]
     },
     "TAX_SERVICE": {
@@ -162,7 +165,9 @@
     "TAX": {
       "synonyms": [
         "налог",
-        "ндс"
+        "ндс",
+        "госпошлина",
+        "пошлина"
       ],
       "parents": [
         "OBJECT"
@@ -185,7 +190,7 @@
         "номер\\s+телефон"
       ],
       "parents": [
-        "OBJECT"
+        "PHONE"
       ]
     },
     "NEW_DESIGN": {
@@ -269,8 +274,26 @@
     "REGISTRY": {
       "synonyms": [
         "картотека",
-        "справочник контрагент",
-        "реестр"
+        "справочник",
+        "реестр",
+        "регистр"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "C_AGENT": {
+      "synonyms": [
+        "контрагент"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "WORKER": {
+      "synonyms": [
+        "работник",
+        "сотрудник"
       ],
       "parents": [
         "OBJECT"
@@ -329,6 +352,24 @@
       ],
       "parents": [
         "OBJECT"
+      ]
+    },
+    "CREDIT": {
+      "synonyms": [
+        "кредит",
+        "кредитная"
+      ],
+      "parents": [
+        "BANK_SERVICE"
+      ]
+    },
+    "DEPOSIT": {
+      "synonyms": [
+        "вклад",
+        "депозит"
+      ],
+      "parents": [
+        "BANK_SERVICE"
       ]
     },
     "LIMIT_ON": {
@@ -444,6 +485,17 @@
       ],
       "parents": [
         "OBJECT"
+      ],
+      "features": [
+        "CURRENCY"
+      ]
+    },
+    "CURRENCY": {
+      "synonyms": [
+        "валюта"
+      ],
+      "parents": [
+        "MONEY"
       ]
     },
     "MONEY": {
@@ -586,13 +638,38 @@
         "OBJECT"
       ]
     },
-    "DOCUMENT":
-    {
+    "DOCUMENT": {
       "synonyms": [
         "документ"
       ],
       "parents": [
         "OBJECT"
+      ]
+    },
+    "NOTIFICATION": {
+      "synonyms": [
+        "уведомление",
+        "информирование"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "COST": {
+      "synonyms": [
+        "стоимость",
+        "цена"
+      ],
+      "parents": [
+        "ACTION"
+      ]
+    },
+    "COMMISSION": {
+      "synonyms": [
+        "комиссия"
+      ],
+      "parents": [
+        "ACTION"
       ]
     }
   },

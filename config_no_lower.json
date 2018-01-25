@@ -105,7 +105,6 @@
     }
   },
   "order": [
-    "lower",
     "unicode_filter",
     "newline_filter",
     "html_filter",

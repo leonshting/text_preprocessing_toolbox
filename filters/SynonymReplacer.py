@@ -1,9 +1,9 @@
 import re
 import json
 import os
-
-from filters.BaseFilter import BaseFilter
 from collections import OrderedDict
+
+from preprocessing.filters.BaseFilter import BaseFilter
 
 
 class SynonymReplacer(BaseFilter):
@@ -36,7 +36,8 @@ class SynonymReplacer(BaseFilter):
             if self._rpl_w_token:
                 to_rpl = self._token_dict.get(k, to_rpl)
                 # pattern_list.append(k)
-            to_rpl = ' {} '.format(to_rpl)
+            if self._embrace:
+                to_rpl = '\g<begin> {} \g<end>'.format(to_rpl)
             for pattern in pattern_list:
                 if self._pattern_dict.get((k, pattern)) is None:
                     self._pattern_dict[(k, pattern)] = re.compile(pattern)

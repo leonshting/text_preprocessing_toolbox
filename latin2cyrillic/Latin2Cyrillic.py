@@ -1,6 +1,6 @@
 import numpy as np
 
-from helpers.for_strings import alphabet
+from preprocessing.helpers.for_strings import alphabet
 
 
 class Latin2Cyrillic:

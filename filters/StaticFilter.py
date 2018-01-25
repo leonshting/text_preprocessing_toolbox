@@ -1,7 +1,7 @@
 import re
 import os
 
-from filters.BaseFilter import BaseFilter
+from preprocessing.filters.BaseFilter import BaseFilter
 
 
 class StaticFilter(BaseFilter):
@@ -13,6 +13,7 @@ class StaticFilter(BaseFilter):
         self._pattern_file = pattern_file
         self._patterns = self._load_patterns_with_file(self._pattern_file)
         self._pattern = self._make_single_pattern_w_patterns(self._patterns)
+        self._embrace = embrace
         if embrace:
             self._final_patterns = self._populate_pattern(self._pattern)
         else:
@@ -22,7 +23,12 @@ class StaticFilter(BaseFilter):
         for pattern in self._final_patterns:
             if self._pattern_dict.get(pattern) is None:
                 self._pattern_dict[pattern] = re.compile(pattern=pattern)
-            s = self._pattern_dict[pattern].sub(string=s, repl=' {} '.format(self._replace_char))
+            if self._embrace:
+                to_rpl = '\g<begin> {} \g<end>'.format(self._replace_char)
+            else:
+                to_rpl = self._replace_char
+
+            s = self._pattern_dict[pattern].sub(string=s, repl=to_rpl)
         return s
 
     @classmethod
