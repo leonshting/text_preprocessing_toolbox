@@ -1,6 +1,7 @@
 import json
 import os
 from collections import defaultdict
+from typing import List
 
 from preprocessing.prod.dict_parsers.GraphDictParser import GraphDictParser
 
@@ -10,6 +11,8 @@ class BaseGraphSubstitute:
         self.parser = GraphDictParser
         self._files = self.get_graphed_dicts(config_file)
         self._graphs = [GraphDictParser(filename=file).get_graph() for file in self._files]
+        self._feat_graphs = [GraphDictParser(filename=file).get_feat_graph() for file in self._files if
+                             len(GraphDictParser(filename=file).get_feat_graph()) != 0]
         self._types = [GraphDictParser(filename=file).get_types() for file in self._files]
 
     @staticmethod
@@ -24,6 +27,10 @@ class BaseGraphSubstitute:
     @property
     def graphs(self):
         return self._graphs
+
+    @property
+    def feat_graphs(self):
+        return self._feat_graphs
 
     @property
     def types(self):
@@ -56,6 +63,54 @@ class ClosestGraphSubstitute(BaseGraphSubstitute):
     def __init__(self, config_file):
         super(ClosestGraphSubstitute, self).__init__(config_file=config_file)
 
-    def subs_string(self, tokenized_string: str):
-        # pass
-        return tokenized_string
+    def subs_dict(self, tokenized_string: str):
+        ret = tokenized_string.split()
+        ret_dict = defaultdict(list)
+        for graph in self.graphs:
+            tmp_dict = defaultdict(list)
+            for word in ret:
+                tmp_word = word
+                while graph.get(tmp_word) is not None:
+                    for _word in graph.get(tmp_word):
+                        tmp_dict[_word].append(word)
+                    tmp_word = graph.get(tmp_word)[0]
+            ret_dict.update(tmp_dict)
+        return ret_dict
+
+    def feat_dict(self, fields: List[str]):
+        ret_dict = defaultdict(list)
+        for graph in self.feat_graphs:
+            tmp_dict = defaultdict(list)
+            for word in fields:
+                tmp_word = word
+                while graph.get(tmp_word) is not None:
+                    for _word in graph.get(tmp_word):
+                        tmp_dict[word].append(_word)
+                    tmp_word = graph.get(tmp_word)[0]
+            ret_dict.update(tmp_dict)
+        return ret_dict
+
+
+class ClosestContextSubstitute(BaseGraphSubstitute):
+    def __init__(self, config_file):
+        super(ClosestContextSubstitute, self).__init__(config_file=config_file)
+        # tired govnokod
+        for g in self.graphs:
+            for gf in self.feat_graphs:
+                for k,v in gf.items():
+                    if g.get(k) is not None:
+                        g[k].extend(v)
+
+    def subs_dict(self, tokenized_string: str):
+        ret = tokenized_string.split()
+        ret_dict = defaultdict(list)
+        for graph in self.graphs:
+            tmp_dict = defaultdict(list)
+            for word in ret:
+                tmp_word = word
+                while graph.get(tmp_word) is not None:
+                    for _word in graph.get(tmp_word):
+                        tmp_dict[_word].append(word)
+                    tmp_word = graph.get(tmp_word)[0]
+            ret_dict.update(tmp_dict)
+        return ret_dict

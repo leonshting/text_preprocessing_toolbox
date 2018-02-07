@@ -43,7 +43,17 @@
         "платежок",
         "банковский ордер",
         "платежный документ",
-        "ведомость"
+        "ведомость",
+        "платежное требование",
+        "платежный требование"
+      ],
+      "parents": [
+        "ORDER"
+      ]
+    },
+    "ORDER": {
+      "synonyms": [
+        "распоряжение"
       ],
       "parents": [
         "DOCUMENT"
@@ -66,6 +76,10 @@
       ],
       "parents": [
         "PHONE"
+      ],
+      "features": [
+        "OLD",
+        "NEW"
       ]
     },
     "SBRF": {
@@ -152,6 +166,14 @@
         "CURRENCY"
       ]
     },
+    "ROUBLE": {
+      "synonyms": [
+        "((рубль)|₽)"
+      ],
+      "parents": [
+        "CURRENCY"
+      ]
+    },
     "TAX_SERVICE": {
       "synonyms": [
         "фнс",
@@ -191,32 +213,10 @@
       ],
       "parents": [
         "PHONE"
-      ]
-    },
-    "NEW_DESIGN": {
-      "synonyms": [
-        "новый\\s+дизайн",
-        "новый\\s+интерфейс",
-        "новый\\s+версия",
-        "новый\\s+платформа",
-        "новый\\s+программа"
       ],
-      "parents": [
-        "DESIGN"
-      ]
-    },
-    "OLD_DESIGN": {
-      "synonyms": [
-        "старый\\s+дизайн",
-        "старый\\s+интерфейс",
-        "старый\\s+версия",
-        "cтарый\\s+платформа",
-        "старый\\s+формат",
-        "старый\\s+программа",
-        "старый\\s+сбербанк-онлайн"
-      ],
-      "parents": [
-        "DESIGN"
+      "features": [
+        "NEW",
+        "OLD"
       ]
     },
     "DESIGN": {
@@ -226,6 +226,10 @@
       ],
       "parents": [
         "OBJECT"
+      ],
+      "features": [
+        "NEW",
+        "OLD"
       ]
     },
     "APPLIED_INVOICE": {
@@ -254,7 +258,8 @@
     },
     "SALARY_PROJECT": {
       "synonyms": [
-        "зарплатн[ыо]й проект"
+        "зарплатн[ыо]й проект",
+        "зп проект"
       ],
       "parents": [
         "SALARY"
@@ -312,7 +317,9 @@
     "EMAIL": {
       "synonyms": [
         "электронный\\s+почта",
-        "e-mail"
+        "e-mail",
+        "адрес\\s+почт[аы]",
+        "почта"
       ],
       "parents": [
         "AUTH_FEAT"
@@ -363,6 +370,15 @@
         "BANK_SERVICE"
       ]
     },
+    "OVERDRAFT": {
+      "synonyms": [
+        "экспресс овердрафт",
+        "овердрафт"
+      ],
+      "parents": [
+        "CREDIT"
+      ]
+    },
     "DEPOSIT": {
       "synonyms": [
         "вклад",
@@ -410,23 +426,6 @@
         "OBJECT"
       ]
     },
-    "OLD": {
-      "synonyms": [
-        "старый",
-        "прежний"
-      ],
-      "parents": [
-        "OBJECT"
-      ]
-    },
-    "NEW": {
-      "synonyms": [
-        "новый"
-      ],
-      "parents": [
-        "OBJECT"
-      ]
-    },
     "RECIPIENT": {
       "synonyms": [
         "получатель",
@@ -458,18 +457,6 @@
         "OBJECT"
       ]
     },
-    "UNCOMFORTABLE_OR_BAD": {
-      "synonyms": [
-        "не\\s*удобный",
-        "не\\s*удобно",
-        "плохой",
-        "плохо",
-        "не\\s*практичный"
-      ],
-      "parents": [
-        "OBJECT"
-      ]
-    },
     "GOOD_UNTIL": {
       "synonyms": [
         "срок действия",
@@ -492,7 +479,8 @@
     },
     "CURRENCY": {
       "synonyms": [
-        "валюта"
+        "валюта",
+        "валютный"
       ],
       "parents": [
         "MONEY"
@@ -500,7 +488,7 @@
     },
     "MONEY": {
       "synonyms": [
-        "денежный\\s+средств[оа]?",
+        "денежны[ые]\\s+средств[оа]?",
         "деньги",
         "средства",
         "средство",
@@ -621,6 +609,15 @@
         "OBJECT"
       ]
     },
+    "DEBT": {
+      "synonyms": [
+        "долг",
+        "задолженность"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
     "STATUS": {
       "synonyms": [
         "статус"
@@ -655,13 +652,22 @@
         "OBJECT"
       ]
     },
+    "TARIF_PLAN": {
+      "synonyms": [
+        "тариф",
+        "тарифный план"
+      ],
+      "parents": [
+        "COST"
+      ]
+    },
     "COST": {
       "synonyms": [
         "стоимость",
         "цена"
       ],
       "parents": [
-        "ACTION"
+        "OBJECT"
       ]
     },
     "COMMISSION": {
@@ -669,7 +675,84 @@
         "комиссия"
       ],
       "parents": [
-        "ACTION"
+        "COST"
+      ]
+    },
+    "ID": {
+      "synonyms": [
+        "паспорт",
+        "удостоверение личность",
+        "удостоверять личность"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "SERVICE": {
+      "synonyms": [
+        "обслуживание",
+        "ведение"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "BANK": {
+      "synonyms": [
+        "банк[уаи]",
+        "банк"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "GOAL": {
+      "synonyms": [
+        "цель",
+        "назначение"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "PERSONAL_BANK": {
+      "synonyms": [
+        "личный кабинет"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "MY_PROFILE": {
+      "synonyms": [
+        "мой профиль"
+      ],
+      "parents": [
+        "PERSONAL_BANK"
+      ]
+    },
+    "SYSTEM": {
+      "synonyms": [
+        "система"
+      ],
+      "parents": [
+        "OBJECT"
+      ]
+    },
+    "PRODUCT": {
+      "synonyms": [
+        "продукт"
+      ],
+      "parents": [
+        "BANK_SERVICE"
+      ]
+    },
+    "REPORT": {
+      "synonyms": [
+        "отчет"
+      ],
+      "parents": [
+        "DOCUMENT"
       ]
     }
   },

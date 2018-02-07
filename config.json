@@ -1,6 +1,6 @@
 {
   "config": {
-    "BASE_DICT_DIR": "/Users/leonshting/Programming/Sberbank/preprocessing/dicts/",
+    "BASE_DICT_DIR": "/home/ALPHA/shtanko-la/Programming/preprocessing/dicts/",
     "available_filters": {
       "html_filter": {
         "file": "html_residuals_patterns.json",
@@ -34,6 +34,12 @@
       },
       "action_filter": {
         "file": "actions_dict_graph.json",
+        "filter_kind": "multiple_replace",
+        "embrace": true,
+        "graphed": true
+      },
+      "feature_filter": {
+        "file": "objects_feats_graph.json",
         "filter_kind": "multiple_replace",
         "embrace": true,
         "graphed": true
@@ -101,7 +107,6 @@
         "filter_kind": "multiple_replace",
         "embrace": true
       }
-
     }
   },
   "order": [
@@ -115,12 +120,14 @@
     "spell_corrections",
     "composed_entities",
     "object_filter",
+    "feature_filter",
     "numeric_filter",
     "stemmer",
     "errors",
     "composed_entities",
     "object_filter",
     "action_filter",
+    "feature_filter",
     "personated",
     "lettered_digits_filter",
     "month_filter"

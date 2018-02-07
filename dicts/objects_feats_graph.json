@@ -1,0 +1,34 @@
+{
+  "tokens": {
+    "OLD": {
+      "synonyms": [
+        "старый",
+        "прежний"
+      ],
+      "parents": [
+        "FEATURE"
+      ]
+    },
+    "NEW": {
+      "synonyms": [
+        "новый"
+      ],
+      "parents": [
+        "FEATURE"
+      ]
+    },
+    "UNCOMFORTABLE_OR_BAD": {
+      "synonyms": [
+        "не\\s*удобный",
+        "не\\s*удобно",
+        "плохой",
+        "плохо",
+        "не\\s*практичный"
+      ],
+      "parents": [
+        "FEATURE"
+      ]
+    }
+  },
+  "type": "FEATURE"
+}
